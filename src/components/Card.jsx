@@ -1,0 +1,27 @@
+import cardImage from "../assets/images/card-image.svg";
+
+const Card = ({ color }) => {
+    return (
+        <div className={color ? `card card--${color}` : "card"}>
+            <div className="card__header">
+                <img
+                    src={cardImage}
+                    alt=""
+                    className="card__header-image"
+                    loading="lazy"
+                />
+                <h5 className="card__header-text">
+                    Nisi ullamco tempor tempor nulla.
+                </h5>
+            </div>
+            <div className="card__description">
+                <p className="card__description-text">
+                    Nisi ullamco tempor tempor nulla labore ad labore sit eu
+                    duis.
+                </p>
+            </div>
+        </div>
+    );
+};
+
+export default Card;
